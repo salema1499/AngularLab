@@ -42,12 +42,15 @@ class="table table-info table-hover">
   </tbody>
 </table>
 </div>
-<div>
+<div *ngIf="!IsPurshased">
 <label>Enter Your Name </label>
-<input type="text" [(ngModel)]="ClientName"  #tese />
-{{ClientName}}
+<input type="text" [(ngModel)]="ClientName"/>
+
 </div>
 
 <div>
-  <button (click)="funbutton(tese.value)">Buy</button>
+  <button *ngIf="!IsPurshased" (click)="funbutton()">Buy</button>
+  <h1 *ngIf="IsPurshased">Thanks For Purchaing From Our Store {{ClientName}}</h1>
 </div>
+
+

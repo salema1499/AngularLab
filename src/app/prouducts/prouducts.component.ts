@@ -24,9 +24,10 @@ export class ProuductsComponent implements OnInit {
   ClientName: string = "";
   IsPurshased: boolean = false;
 
-  funbutton(data: any) {
+  funbutton() {
     // document.write("Thanks For Purchaing From Our Store " + data)
     this.IsPurshased = true;
+
 
   }
 
