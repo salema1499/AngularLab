@@ -18,7 +18,6 @@ export class ProuductsComponent implements OnInit {
   Prodctlist: IProduct[] = [{ ID: 1, Name: "PARK 1", Quantity: 150, Price: 1000, Img: "good" }
     ,
   { ID: 2, Name: "PARK 2", Quantity: 200, Price: 1500, Img: "V-good" },
-  { ID: 3, Name: "PARK 3", Quantity: 100, Price: 12000, Img: "E-good" }
 
   ];
   CategoryList: ICategory[] = [{ ID: 555, Name: "park 1" }];
