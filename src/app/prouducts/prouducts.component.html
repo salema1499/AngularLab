@@ -1,53 +1,55 @@
 <h1> MY Prodect{{Storname |uppercase}}</h1>
-<img [src]="Storlogo"/>
+<img [src]="Storlogo" />
 
 <div>
-    <h3
-    *ngIf="Discount"
-    >We offer an Explicit discount of {{Discount}}</h3>
-    <h3
-    *ngIf="!Discount"
-    >nooooooooooooooooo</h3>
+    <h3 *ngIf="Discount">We offer an Explicit discount of {{Discount}}</h3>
+    <h3 *ngIf="!Discount">nooooooooooooooooo</h3>
 </div>
 <div class="dropdown">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
     Details this categories
   </button>
-  <ul class="dropdown-menu" *ngFor="let item of CategoryList">
-    <li><a class="dropdown-item" href="#"> ID :{{item.ID}} </a></li>
-    <li><a class="dropdown-item" href="#">Name : {{item.Name}}</a></li>
+    <ul class="dropdown-menu" *ngFor="let item of CategoryList">
+        <li><a class="dropdown-item" href="#"> ID :{{item.ID}} </a></li>
+        <li><a class="dropdown-item" href="#">Name : {{item.Name}}</a></li>
     </ul>
 </div>
 <div>
-<table
-*ngIf="!IsPurshased"
-class="table table-info table-hover">
-  <thead class="table table-dark table-hover">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Quantity</th>
-      <th>Price</th>
-      <th>Img</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of Prodctlist">
-      <th> {{item.ID}}</th>
-      <th>{{item.Name}}</th>
-      <th>{{item.Quantity}}</th>
-      <th>{{item.Price}}</th>
-      <th>{{item.Img}}</th>
-    </tr>
-  </tbody>
-</table>
-</div>
-<div>
-<label>Enter Your Name </label>
-<input type="text" [(ngModel)]="ClientName"  #tese />
-{{ClientName}}
+    <table *ngIf="!IsPurshased" class="table table-info table-hover">
+        <thead class="table table-dark table-hover">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Img</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Prodctlist">
+                <th> {{item.ID}}</th>
+                <th>{{item.Name}}</th>
+                <th>{{item.Quantity}}</th>
+                <th>{{item.Price}}</th>
+                <th>{{item.Img}}</th>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <div>
-  <button (click)="funbutton(tese.value)">Buy</button>
+    <div *ngIf="!IsPurshased">
+        <label>Enter Your Name </label>
+        <input type="text" [(ngModel)]="ClientName" />
+    </div>
+
+    <div>
+        <button *ngIf="!IsPurshased" (click)="funbutton()">Buy</button>
+        <h1 *ngIf="IsPurshased">
+            Thanks For Purchaing From Our Store {{ ClientName }}
+        </h1>
+    </div>
 </div>
+<button (click)="renderValues()">clicktoshow</button>
+<!-- 
+<button class="btn btn-primary" (click)="onAddItem(itemNameInput)">Add Item</button> -->
