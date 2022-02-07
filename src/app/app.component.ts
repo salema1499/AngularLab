@@ -2,6 +2,7 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import { ProuductsComponent } from './prouducts/prouducts.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
