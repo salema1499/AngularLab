@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmplyeeService } from 'src/app/service/emplyee.service';
 
 @Component({
   selector: 'app-pagenotfound',
@@ -13,3 +14,4 @@ export class PagenotfoundComponent implements OnInit {
   }
 
 }
+

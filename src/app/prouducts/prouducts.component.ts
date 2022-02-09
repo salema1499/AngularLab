@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { EmplyeeService } from '../service/emplyee.service';
 import { DiscountOffers, ICategory, IProduct } from '../SharedClassesAndTypes/interfaceIProduct'; 
 import { EventEmitter  } from '@angular/core';
+import { Router } from '@angular/router';
  
 @Component({
   selector: 'app-prouducts',
@@ -18,7 +19,8 @@ export class ProuductsComponent implements OnInit {
   IsPurshased: boolean = false;
 
   constructor(
-    private empService : EmplyeeService
+    private empService : EmplyeeService ,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -37,11 +39,24 @@ export class ProuductsComponent implements OnInit {
   this.childEvent.emit( this.empService.GetAllProducts())
   }
   
-//   renderValue(){
-// console.log("kjhvajkh")
-//   }
+   //   renderValue(){
+   // console.log("kjhvajkh")
+  //  //   }
+  //  withoutdiscount(){
+  //    this.router.navigate(["/withoutdiscount"]),
+  //     }
+  // withdiscount(){
+  // this.router.navigate(["/withdiscount"]),
+  //    }
+  
 
+  withdiscount(){
+    this.router.navigate(["withoutdiscount"])
+  }
 
+  withoutdiscount(){
+    this.router.navigate(["withoutdiscount"])
+  }
 }
 
 

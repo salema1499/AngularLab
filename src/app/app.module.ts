@@ -11,6 +11,12 @@ import { EmpdetliseComponent } from './service/empdetlise/empdetlise.component';
 import {HttpClientModule}from '@angular/common/http'
 import { PostsComponent } from './header/posts/posts.component';
 import { UsersComponent } from './header/users/users.component';
+import { ProuductswithoutdiscountComponent } from './prouductswithoutdiscount/prouductswithoutdiscount.component';
+import { ProuductswithdiscountComponent } from './prouductswithdiscount/prouductswithdiscount.component';
+import { Router } from '@angular/router';
+import { LOGINComponent } from './header/login/login.component';
+import { REGISTERComponent } from './header/register/register.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +25,19 @@ import { UsersComponent } from './header/users/users.component';
     ProuductsComponent,
     EmpdetliseComponent,
     PostsComponent,
-    UsersComponent
+    UsersComponent,
+    ProuductswithoutdiscountComponent,
+    ProuductswithdiscountComponent,
+    LOGINComponent,
+    REGISTERComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
