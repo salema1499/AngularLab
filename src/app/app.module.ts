@@ -30,6 +30,7 @@ import { REGISTERComponent } from './header/register/register.component';
     ProuductswithdiscountComponent,
     LOGINComponent,
     REGISTERComponent,
+    
   
   ],
   imports: [
