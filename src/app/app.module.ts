@@ -16,6 +16,9 @@ import { ProuductswithdiscountComponent } from './prouductswithdiscount/prouduct
 import { Router } from '@angular/router';
 import { LOGINComponent } from './header/login/login.component';
 import { REGISTERComponent } from './header/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -32,12 +35,17 @@ import { REGISTERComponent } from './header/register/register.component';
     REGISTERComponent,
     
   
+    
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
+
+
     
   ],
   providers: [],
